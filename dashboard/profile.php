@@ -1,13 +1,14 @@
+Kalkidan, [5/8/2025 8:53 PM]
 <?php
 // Start session and include necessary files
+require_once DIR.'/../includes/config.php';
+require_once DIR.'/../includes/auth.php';
+require_once DIR.'/../includes/db.php';
 session_start();
-require_once __DIR__.'/../includes/config.php';
-require_once __DIR__.'/../includes/auth.php';
-require_once __DIR__.'/../includes/db.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header('Location: '.BASE_URL.'login');
+    header('Location: '.BASE_URL.'login.php');
     exit();
 }
 
@@ -15,17 +16,17 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 try {
     $db = Database::getInstance();
-    $stmt = $db->prepare("SELECT * FROM users WHERE id = ?");
+    $stmt = $db->prepare("SELECT * FROM users WHERE user_id = ?");
     $stmt->execute([$user_id]);
     $user = $stmt->fetch();
     
     if (!$user) {
-      throw new Exception("User not found");
+        throw new Exception("User not found");
     }
 } catch (Exception $e) {
-  error_log("Profile Error: " . $e->getMessage());
-  header('Location: '.BASE_URL.'login?error=profile_error');
-  exit();
+    error_log("Profile Error: " . $e->getMessage());
+    header('Location: '.BASE_URL.'login.php?error=profile_error');
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -34,16 +35,16 @@ try {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile | Fashion App</title>
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/global.css">
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/profile.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
   <div class="profile-container">
     <header class="profile-header">
       <div class="profile-avatar">
-        <img src="<?php echo BASE_URL; ?>assets/images/user-avatar.jpg" alt="User Avatar">
+        <img src="../assets/images/user-avatar.jpg" alt="User Avatar">
       </div>
-      <h1><?= htmlspecialchars($user['name'] ?? 'User') ?></h1>
+      <h1><?= htmlspecialchars($user['full_name'] ?? $user['username'] ?? 'User') ?></h1>
       <p class="profile-email"><?= htmlspecialchars($user['email'] ?? 'example@example.com') ?></p>
     </header>
 
@@ -63,7 +64,7 @@ try {
 
       <section class="preference-card">
         <h2 class="section-title">
-          <span class="icon">🏷️</span> Favorite Brands
+          <span class="icon">🏷</span> Favorite Brands
         </h2>
         <ul class="tag-list">
           <li class="tag">Zara</li>
@@ -77,7 +78,7 @@ try {
     <!-- Voting History -->
     <section class="history-card">
       <h2 class="section-title">
-        <span class="icon">🗳️</span> Voting History
+        <span class="icon">🗳</span> Voting History
       </h2>
       <div class="history-item">
         <div class="history-content">
@@ -102,29 +103,30 @@ try {
       </div>
     </section>
 
-    <!-- Bottom Navigation -->
+Kalkidan, [5/8/2025 8:53 PM]
+<!-- Bottom Navigation -->
     <nav class="bottom-nav">
-      <a href="<?php echo BASE_URL; ?>" class="nav-link">
+      <a href="home.php" class="nav-link">
         <span class="nav-icon">🏠</span>
         <span class="nav-text">Home</span>
       </a>
-      <a href="<?php echo BASE_URL; ?>suggestions" class="nav-link">
-        <span class="nav-icon">🛠️</span>  
+      <a href="suggestions.php" class="nav-link">
+        <span class="nav-icon">🛠</span>  
         <span class="nav-text">Suggestions</span>
       </a>
-      <a href="<?php echo BASE_URL; ?>outfit" class="nav-link">
+      <a href="outfit.php" class="nav-link">
         <span class="nav-icon">👗</span>
         <span class="nav-text">Outfits</span>
       </a>
-      <a href="<?php echo BASE_URL; ?>voting" class="nav-link">
+      <a href="voting.php" class="nav-link">
         <span class="nav-icon">✋</span>
         <span class="nav-text">Voting</span>
       </a>
-      <a href="<?php echo BASE_URL; ?>event" class="nav-link">
+      <a href="event.php" class="nav-link">
         <span class="nav-icon">📅</span>
         <span class="nav-text">Events</span>
       </a>
-      <a href="<?php echo BASE_URL; ?>settings" class="nav-link">
+      <a href="settings.php" class="nav-link">
         <span class="nav-icon">⚙️</span> 
         <span class="nav-text">Settings</span>
       </a>
