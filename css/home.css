@@ -1,0 +1,309 @@
+/* Home Page Styles */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 80px; /* Space for bottom nav */
+  }
+  
+  .hero-section {
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 60vh;
+    max-height: 600px;
+    min-height: 400px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    color: white;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    max-width: 600px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  
+  .hero-cta {
+    display: inline-block;
+    background-color: #ff4757;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-cta:hover {
+    background-color: #e84118;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .featured-section {
+    margin: 50px 0;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: #333;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 4px;
+    background-color: #ff4757;
+    border-radius: 2px;
+  }
+  
+  .view-all {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  
+  .view-all:hover {
+    color: #ff4757;
+  }
+  
+  .trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+  }
+  
+  .trending-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .trending-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+  
+  .trending-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  
+  .trending-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff4757;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .trending-info {
+    padding: 18px;
+  }
+  
+  .trending-name {
+    font-size: 1rem;
+    margin: 0 0 5px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .trending-description {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .quick-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  .action-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .action-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #ff4757;
+  }
+  
+  .action-title {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .action-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero-text h1 {
+      font-size: 2.4rem;
+    }
+    
+    .quick-actions {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 50vh;
+    }
+    
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-text p {
+      font-size: 1rem;
+    }
+    
+    .trending-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      height: 60vh;
+      min-height: 300px;
+    }
+    
+    .hero-overlay {
+      padding: 25px;
+      justify-content: center;
+    }
+    
+    .quick-actions {
+      grid-template-columns: 1fr;
+    }
+    
+    .trending-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  /* Quick Actions Grid Layout */
+.quick-actions .actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .quick-actions .actions-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-actions .actions-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
+/* Quick Actions Container */
+.quick-actions {
+  padding: 20px 0; /* Add vertical spacing */
+}
+
+.quick-actions .actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased min-width */
+  gap: 25px; /* Increased gap */
+}
+
+/* Individual Action Cards */
+.action-card {
+  min-height: 180px; /* Increased height */
+  padding: 25px; /* More internal space */
+  border-radius: 12px; /* Smoother corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1015px) {
+  .quick-actions .actions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .action-card {
+    min-height: 160px;
+    padding: 20px;
+  }
+}
