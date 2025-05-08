@@ -1,0 +1,103 @@
+/* Outfit Card Container */
+.outfit-card {
+  display: block;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Outfit Image Styling */
+.outfit-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Outfit Info Section */
+.outfit-info {
+  padding: 15px;
+  background: white;
+}
+
+/* Title Styling */
+.outfit-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Designer/Brand Text */
+.designer-brand {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 10px 0;
+}
+
+/* Description Text */
+.outfit-description {
+  color: #444;
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+/* Meta Tags Container */
+.outfit-meta {
+  display: flex;
+  gap: 8px;
+}
+
+/* Style and Season Tags */
+.style-tag,
+.season-tag {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.style-tag {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.season-tag {
+  background: #e0e0e0;
+  color: #444;
+}
+
+/* Grid Layout */
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Filter Bar Styling */
+.filter-bar {
+  display: flex;
+  gap: 20px;
+  padding: 15px 20px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-weight: 500;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
