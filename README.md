@@ -144,8 +144,8 @@ live demo chemerebet ena demo screenshoot folder kefeche ena ene elekeleshalew s
 ## Screenshots
 | Home Page | Voting Interface |
 |-----------|------------------|
-| <img src="screenshots/home.png" width="300"> | <img src="screenshots/voting.png" width="300"> |
+| <img src="screenshot/home.jpg" width="300"> | <img src="screenshot/voting.jpg" width="300"> |
 
-| Profile | Events |
+| Profile | Setting|
 |---------|--------|
-| <img src="screenshots/profile.png" width="300"> | <img src="screenshots/events.png" width="300"> | yehen readme ly add argew le screenshootu
+| <img src="screenshot/profile.jpg" width="300"> | <img src="screenshot/setting.jpg" width="300"> | yehen readme ly add argew le screenshootu
