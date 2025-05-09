@@ -69,7 +69,7 @@ require_once __DIR__ . '/../includes/config.php';
 
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
-      <a href="/">
+      <a href="../index.php">
         <span class="nav-icon">🏠</span>
       <span class="nav-text">Home</span>
       </a>
@@ -80,7 +80,7 @@ require_once __DIR__ . '/../includes/config.php';
       <a href="Settings.php" class="active">
         <span class="nav-icon">⚙️</span> 
       <span class="nav-text">Settings</span></a>
-      <a href="profile.php">
+      <a href="profile.html">
         <span class="nav-icon">👤</span>
       <span class="nav-text">Profile</span>
       </a>
