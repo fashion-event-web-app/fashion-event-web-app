@@ -1,13 +1,12 @@
 <?php
-// Update the paths to correctly include the required files
 require_once __DIR__.'/../includes/config.php';
 require_once __DIR__.'/../includes/auth.php';
 require_once __DIR__.'/../includes/db.php';
 session_start();
 
-// Check if user is already logged in
-if (isset($_SESSION['user_id'])) {
-    header('Location: '.BASE_URL.'profile');
+// Only redirect to profile if this is a POST login attempt from an already logged-in user
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['user_id'])) {
+    header("Location: ../dashboards/profile.php");
     exit();
 }
 
@@ -18,17 +17,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $db = Database::getInstance();
-        $stmt = $db->prepare("SELECT id, name, email, password FROM users WHERE email = ?");
+        $stmt = $db->prepare("SELECT user_id, username, email, password_hash FROM users WHERE email = ?");
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if ($user && password_verify($password, $user["password"])) {
-            $_SESSION["user_id"] = $user["id"];
-            $_SESSION["user_name"] = $user["name"];
+        if ($user && password_verify($password, $user["password_hash"])) {
+            $_SESSION["user_id"] = $user["user_id"];
+            $_SESSION["user_name"] = $user["username"];
             $_SESSION["user_email"] = $user["email"];
             
             session_regenerate_id(true);
-            header("Location: ".BASE_URL."profile");
+            
+            // Redirect to either the requested page or profile
+            if (isset($_SESSION['redirect_to'])) {
+                $target = $_SESSION['redirect_to'];
+                unset($_SESSION['redirect_to']);
+                header("Location: $target");
+            } else {
+                header("Location: ../dashboards/profile.php");
+            }
             exit;
         } else {
             $error = "Invalid email or password.";
@@ -38,6 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "System error. Please try again later.";
     }
 }
+
+// Set error reporting (should be at top, but kept here for context)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login | Fashion Event Web</title>
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>../css/global.css">
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>../css/auth.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/auth.css">
 </head>
 <body>
   <div class="auth-container">

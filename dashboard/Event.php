@@ -8,8 +8,8 @@ require_once __DIR__ . '/../includes/config.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fashion Events</title>
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>../css/global.css">
-  <link rel="stylesheet" href="<?php echo BASE_URL; ?>../css/events.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/events.css">
 </head>
 <body>
   <div class="events-container">
@@ -23,7 +23,7 @@ require_once __DIR__ . '/../includes/config.php';
       <!-- Event 1 -->
       <article class="event-card">
         <div class="event-image-container">
-          <img src="<?php echo BASE_URL; ?>../assets/images/paris-fashion-week.jpg" alt="Paris Fashion Week" class="event-image">
+          <img src="../assets/images/paris-fashion-week.jpg" alt="Paris Fashion Week" class="event-image">
           <span class="event-badge">Featured Event</span>
         </div>
         <div class="event-content">
@@ -54,8 +54,8 @@ require_once __DIR__ . '/../includes/config.php';
       <!-- Event 2 -->
       <article class="event-card">
         <div class="event-image-container">
-          <img src="<?php echo BASE_URL; ?>../assets/images/tokyo-expo.jpg" alt="Met Gala" class="event-image">
-          <span class="event-badge">Exclusive</span>
+        <img src="../assets/images/tokyo-expo.jpg" alt="Met Gala" class="event-image">
+            <span class="event-badge">Exclusive</span>
         </div>
         <div class="event-content">
           <h2 class="event-title">tokyo-expo</h2>
@@ -84,7 +84,7 @@ require_once __DIR__ . '/../includes/config.php';
       <!-- Event 3 -->
       <article class="event-card">
         <div class="event-image-container">
-          <img src="<?php echo BASE_URL; ?>../assets/images/milan-fashion-show.jpg" alt="Milan Fashion Show" class="event-image">
+          <img src="../assets/images/milan-fashion-show.jpg" alt="Milan Fashion Show" class="event-image">
         </div>
         <div class="event-content">
           <h2 class="event-title">Milan Fashion Show</h2>
@@ -114,7 +114,7 @@ require_once __DIR__ . '/../includes/config.php';
 
    <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <a href="../index.php">
+    <a href="/">
       <span class="nav-icon">🏠</span>
       <span class="nav-text">Home</span>
     </a>

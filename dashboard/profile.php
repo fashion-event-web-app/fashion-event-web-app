@@ -1,14 +1,13 @@
-Kalkidan, [5/8/2025 8:53 PM]
 <?php
 // Start session and include necessary files
-require_once DIR.'/../includes/config.php';
-require_once DIR.'/../includes/auth.php';
-require_once DIR.'/../includes/db.php';
+require_once __DIR__.'/../includes/config.php';
+require_once __DIR__.'/../includes/auth.php';
+require_once __DIR__.'/../includes/db.php';
 session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header('Location: '.BASE_URL.'login.php');
+  header("Location: ../auth/login.php");
     exit();
 }
 
@@ -25,7 +24,7 @@ try {
     }
 } catch (Exception $e) {
     error_log("Profile Error: " . $e->getMessage());
-    header('Location: '.BASE_URL.'login.php?error=profile_error');
+       header("Location: " . BASE_URL . "auth/login.php");
     exit();
 }
 ?>
@@ -64,7 +63,7 @@ try {
 
       <section class="preference-card">
         <h2 class="section-title">
-          <span class="icon">🏷</span> Favorite Brands
+          <span class="icon">🏷️</span> Favorite Brands
         </h2>
         <ul class="tag-list">
           <li class="tag">Zara</li>
@@ -78,7 +77,7 @@ try {
     <!-- Voting History -->
     <section class="history-card">
       <h2 class="section-title">
-        <span class="icon">🗳</span> Voting History
+        <span class="icon">🗳️</span> Voting History
       </h2>
       <div class="history-item">
         <div class="history-content">
@@ -103,15 +102,14 @@ try {
       </div>
     </section>
 
-Kalkidan, [5/8/2025 8:53 PM]
-<!-- Bottom Navigation -->
+    <!-- Bottom Navigation -->
     <nav class="bottom-nav">
-      <a href="home.php" class="nav-link">
+    <a href="/" class="nav-link">
         <span class="nav-icon">🏠</span>
         <span class="nav-text">Home</span>
       </a>
       <a href="suggestions.php" class="nav-link">
-        <span class="nav-icon">🛠</span>  
+        <span class="nav-icon">🛠️</span>  
         <span class="nav-text">Suggestions</span>
       </a>
       <a href="outfit.php" class="nav-link">

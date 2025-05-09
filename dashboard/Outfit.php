@@ -118,7 +118,7 @@ require_once __DIR__ . '/../includes/config.php';
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
-    <a href="/index.php">
+    <a href="/">
       <span class="nav-icon">🏠</span>
       <span class="nav-text">Home</span>
     </a>

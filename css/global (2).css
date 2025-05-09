@@ -1,0 +1,105 @@
+/* Global Styles */
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #ff4757;
+    --light-bg: #f8f8f8;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  /* Navigation */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .bottom-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+  }
+  
+  .bottom-nav a.active {
+    color: var(--accent-color);
+    font-weight: 500;
+  }
+  
+  /* Card Styles */
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--primary-color);
+  }
+  
+  /* Utility Classes */
+  .text-button {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #555;
+  }
+  .btn-logout {
+    background: #ff4444;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.btn-logout:hover {
+    background: #cc0000;
+}
