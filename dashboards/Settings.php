@@ -22,8 +22,8 @@ if (isset($_SESSION['user_id'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings | Fashion App</title>
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>../css/global.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>../css/settings.css">
 </head>
 <body>
   <div class="fullscreen-bg">
@@ -66,7 +66,7 @@ if (isset($_SESSION['user_id'])) {
 
     <!-- Bottom Navigation -->
     <nav class="bottom-nav">
-      <a href="/">
+      <a href="<?php echo BASE_URL; ?>">
         <span class="nav-icon">🏠</span>
         <span class="nav-text">Home</span>
       </a>
