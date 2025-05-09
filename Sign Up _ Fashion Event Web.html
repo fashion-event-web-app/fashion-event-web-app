@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost/auth/signup.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Fashion Event Web</title>
+  <link rel="stylesheet" href="./Sign Up _ Fashion Event Web_files/global.css">
+  <link rel="stylesheet" href="./Sign Up _ Fashion Event Web_files/auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <header class="auth-header">
+      <h1>Create Account</h1>
+      <p>Join our fashion community</p>
+    </header>
+
+    <main class="auth-form">
+      
+              <div class="alert error">SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'</div>
+      
+      <form method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required="">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required="">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required="">
+        </div>
+
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="confirm_password" required="">
+        </div>
+
+        <button type="submit" class="btn-primary">Sign Up</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="http://localhost/auth/login.php" class="active">login</a></p>
+      </div>
+    </main>
+  </div>
+
+
+</body></html>

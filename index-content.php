@@ -96,16 +96,19 @@
         
         <a href="./auth/signup.php" class="action-card" aria-label="Create new account">
           <div class="action-icon" aria-hidden="true">✍️</div>
-          <h3 class="action-title">Sign Up</h3>
-          <p class="action-text">Join our community</p>
-        </a>
+          <h3 class="action-title">Sign Up</h3>  </a>
+          <a href="./auth/logout.php"  class="action-card"></a>
+          <div class="action-icon" aria-hidden="true">🚪</div>
+          <h3 class="action-title">log out</h3></a>
+          <h2 class="action-text">Join our community</h2>
+      
       </div>
     </section>
   </div>
 
   <!-- Bottom Navigation -->
   <nav class="bottom-nav" aria-label="Main navigation">
-    <a href="./index.php" class="nav-link active" aria-current="page">
+    <a href="/" class="nav-link active" aria-current="page">
       <span class="nav-icon">🏠</span>
       <span class="nav-text">Home</span>
     </a>

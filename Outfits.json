@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Urban Streetwear Set",
+    "designer": "Alex Chen",
+    "brand": "UrbanX",
+    "style": "streetwear",
+    "season": "fall",
+    "image": "../assets/images/streetwear-set.jpg",
+    "description": "Edgy streetwear combination perfect for urban exploration."
+  },
+  {
+    "title": "Minimalist Office Wear",
+    "designer": "Sophia Lee",
+    "brand": "Minimal",
+    "style": "minimalist",
+    "season": "all",
+    "image": "../assets/images/minimal-office.jpg",
+    "description": "Clean lines and neutral tones for professional settings."
+  },
+  {
+    "title": "Summer Breeze Outfit",
+    "designer": "Carlos Mendez",
+    "brand": "BeachLife",
+    "style": "casual",
+    "season": "summer",
+    "image": "../assets/images/summer-breeze.jpg",
+    "description": "Lightweight fabrics and breezy design for hot summer days."
+  },
+  {
+    "title": "Executive Power Suit",
+    "designer": "Victoria Stone",
+    "brand": "Boardroom",
+    "style": "formal",
+    "season": "spring",
+    "image": "../assets/images/power-suit.jpg",
+    "description": "Sharp navy suit with tailored fit for corporate settings."
+  },
+  {
+    "title": "Cashmere Wool Overcoat",
+    "designer": "Eleanor Whitmore",
+    "brand": "Frost & Hart",
+    "style": "formal",
+    "season": "winter",
+    "image": "../assets/images/winter-overcoat.jpg",
+    "description": "Heavyweight cashmere-wool blend overcoat with fox fur collar. Ideal for formal winter occasions in cold climates."
+  }
+]

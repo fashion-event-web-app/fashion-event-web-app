@@ -19,14 +19,15 @@ try {
     // Route definitions with validation
     $routes = [
         ''           => 'index-content.php',
-        'login'      => 'auth/login.php',
-        'signup'     => 'auth/signup.php',
+        'login'      => '/auth/login.php',
+        'signup'     => '/auth/signup.php',
         'profile'    => 'dashboards/profile.php',
         'outfit'     => 'dashboards/Outfit.php',
         'event'      => 'dashboards/Event.php',
         'voting'     => 'dashboards/Voting.php',
         'suggestions'=> 'dashboards/Suggestions.php',
-        'settings'   => 'dashboards/Settings.php'
+        'settings'   => 'dashboards/Settings.php',
+        'logout'     => '/auth/logout.php'
     ];
 
     foreach ($routes as $path => $file) {

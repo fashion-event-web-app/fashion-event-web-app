@@ -6,7 +6,8 @@ define('DB_USER', 'root');
 define('DB_PASS', ''); // Empty for XAMPP default
 
 // Base URL - Make sure this matches your folder name exactly
-define('BASE_URL', 'http://localhost/fashion-event-web-app/');
+define('BASE_URL', 'http://localhost');
+
 
 // Enable error reporting
 ini_set('display_errors', 1);
